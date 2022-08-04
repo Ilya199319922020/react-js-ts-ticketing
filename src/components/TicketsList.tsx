@@ -1,14 +1,33 @@
-import React, { useEffect, useState } from 'react'
-import {  useSortTicker } from '../assets/hooks/useSortTicker'
+import React from 'react'
+import { useSortTicker } from '../assets/hooks/useSortTicker'
+import SisebarFilter from './SisebarFilter/SisebarFilter'
+import Ticket from './Ticket/Ticket'
+import style from './TicketsList.module.css'
 
 const TicketsList: React.FC<any> = (props) => {
+  const [sortTicker] = useSortTicker()
 
-  const [stateTickers, sortTicker] = useSortTicker()
-  console.log(sortTicker)
+  const listTicker = sortTicker
+    .map(el => <Ticket
+      key={el.price}
+      item={el}
+    />
+    )
+
   return (
-    <>
-      <div>TicketsList</div>
-    </>
+    <div
+      className={style.main}
+    >
+      <SisebarFilter />
+      <div 
+       className={style.main__listTicker}
+      >
+        {
+          listTicker
+        }
+      </div>
+
+    </div>
   )
 }
 

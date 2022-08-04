@@ -1,0 +1,22 @@
+.ticket{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 10px
+}
+.ticket__button{
+	display: flex;
+flex-direction: column;
+}
+
+.ticket__container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: 20px;
+	font-size: 12px;
+	min-width: 350px;
+}
+.ticket__container_info{
+	
+}

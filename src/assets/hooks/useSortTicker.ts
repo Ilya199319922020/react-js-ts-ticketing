@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-export interface Ticket {
+export interface TicketProps {
 	origin: string,
 	origin_name: string,
 	destination: string,
@@ -15,8 +15,8 @@ export interface Ticket {
 }
 
 export const useSortTicker = () => {
-	const [stateTickers, setStateTickers] = useState<Array<Ticket>>([])
-	const [sortTicker, setSortTicker] = useState<Array<Ticket>>([])
+	const [stateTickers, setStateTickers] = useState<Array<TicketProps>>([])
+	const [sortTicker, setSortTicker] = useState<Array<TicketProps>>([])
 
 	async function getData() {
 		let response = await fetch('data/dataTickets.json', { method: 'GET' })
