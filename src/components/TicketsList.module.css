@@ -1,7 +1,20 @@
+
+.wrapper{
+	display: flex;
+	flex-direction: column;
+	padding-top: 30px;
+}
+
+.wrapper__image{
+	border-radius: 50%;
+	width: 70px;
+	margin: 0 auto;
+}
 .main{
 	display: flex;
 	justify-content: center;
 }
 .main__listTicker{
-	margin-left: 30px;
+	margin-top: 10px;
+	margin-left: 40px;
 }

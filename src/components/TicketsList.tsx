@@ -3,6 +3,7 @@ import { useSortTicker } from '../assets/hooks/useSortTicker'
 import SisebarFilter from './SisebarFilter/SisebarFilter'
 import Ticket from './Ticket/Ticket'
 import style from './TicketsList.module.css'
+import angle from '../assets/image/angle.png'
 
 const TicketsList: React.FC<any> = (props) => {
   const [sortTicker] = useSortTicker()
@@ -16,17 +17,23 @@ const TicketsList: React.FC<any> = (props) => {
 
   return (
     <div
-      className={style.main}
+      className={style.wrapper}
     >
-      <SisebarFilter />
-      <div 
-       className={style.main__listTicker}
+      <img
+        className={style.wrapper__image}
+        src={angle} />
+      <div
+        className={style.main}
       >
-        {
-          listTicker
-        }
+        <SisebarFilter />
+        <div
+          className={style.main__listTicker}
+        >
+          {
+            listTicker
+          }
+        </div>
       </div>
-
     </div>
   )
 }

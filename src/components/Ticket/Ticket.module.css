@@ -2,11 +2,17 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 10px 10px
+	padding: 15px 15px;
+	border: 0px solid rgb(216, 220, 236);
+	border-radius: 5px;
+	padding: 10px;
+	background-color: rgb(252, 252, 252);
+	box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+	margin-top: 20px;
 }
 .ticket__button{
 	display: flex;
-flex-direction: column;
+	flex-direction: column;
 }
 
 .ticket__container{
@@ -19,4 +25,24 @@ flex-direction: column;
 }
 .ticket__container_info{
 	
+}
+
+.ticket__button_image{
+	width: 200px;
+	height: 125px;
+}
+.ticket__container_transfer{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+.transfer__element{
+	display: flex;
+	align-items: center;
+}
+.transfer__element_item{
+	width: 80px;
+	height: 1px;
+	background-color: rgb(182, 179, 179);
+	margin-right: 5px;
 }

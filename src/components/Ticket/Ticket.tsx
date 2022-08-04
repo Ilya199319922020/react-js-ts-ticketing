@@ -1,5 +1,7 @@
 import React from 'react'
 import style from './Ticket.module.css'
+import turkishairlines from '../../assets/image/turkishairlines.png'
+import vector from '../../assets/image/Vector1.png'
 
 const Ticket: React.FC<any> = ({ item }) => {
 	const { price, departure_time, origin, origin_name, departure_date,
@@ -13,7 +15,10 @@ const Ticket: React.FC<any> = ({ item }) => {
 			<div
 				className={style.ticket__button}
 			>
-				<span>Картинка</span>
+				<img
+					src={turkishairlines}
+					className={style.ticket__button_image}
+				/>
 				<button>Купить за {price} Р</button>
 			</div>
 			<div
@@ -26,16 +31,27 @@ const Ticket: React.FC<any> = ({ item }) => {
 					<div>{origin},{origin_name} </div>
 					<div>{departure_date}</div>
 				</div>
-				<div>
-					<span>{stops} {
-						stops > 1
-							? 'ПЕРЕСАДКИ'
-							: stops === 0
-								? 'ПЕРЕСАДОК'
-								: 'ПЕРЕСАДКA'
-					}
-					</span>
-					<div>линия с самолётом</div>
+				<div
+					className={style.ticket__container_transfer}
+				>
+					<div>
+						{stops} {
+							stops > 1
+								? 'ПЕРЕСАДКИ'
+								: stops === 0
+									? 'ПЕРЕСАДОК'
+									: 'ПЕРЕСАДКA'
+						}
+					</div>
+					<div
+						className={style.transfer__element}
+					>
+						<div
+							className={style.transfer__element_item}
+						>
+						</div>
+						<img src={vector} />
+					</div>
 				</div>
 				<div>
 					<div>{arrival_time}</div>
