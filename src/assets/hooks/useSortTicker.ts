@@ -17,7 +17,8 @@ export interface TicketProps {
 
 export const useSortTicker = () => {
 	const [stateTickers, setStateTickers] = useState<Array<TicketProps>>([])
-	const [sortTicker, setSortTicker] = useState<Array<TicketProps>>([])
+	const [sortTicker, setSortTicker] = useState<any>([])
+
 
 	async function getData() {
 		let response = await fetch('data/dataTickets.json', { method: 'GET' })

@@ -6,21 +6,25 @@ import style from './TicketsList.module.css'
 import angle from '../assets/image/angle.png'
 
 const TicketsList: React.FC<any> = (props) => {
-  const [sortTicker, setSortTicker,] = useSortTicker()
+  const [sortTicker, toogleTicker,] = useSortTicker()
   const [newSortTicker, setNewSortTicker] = useState<Array<TicketProps>>([])
 
-  const listTicker = sortTicker
-    .map(el => <Ticket
-      key={el.price}
-      item={el}
-    />
-    )
-  const newListTicker = newSortTicker
-    .map(el => <Ticket
-      key={el.price}
-      item={el}
-    />
-    )
+  const listTicker = newSortTicker.length
+    ?
+    newSortTicker
+      .map((el: any) => <Ticket
+        key={el.price}
+        item={el}
+      />
+      )
+
+    :
+    sortTicker
+      .map((el: any) => <Ticket
+        key={el.price}
+        item={el}
+      />
+      )
 
   return (
     <div
@@ -40,11 +44,7 @@ const TicketsList: React.FC<any> = (props) => {
           className={style.main__listTicker}
         >
           {
-            newListTicker.length
-              ?
-              newListTicker
-              :
-              listTicker
+            listTicker
           }
         </div>
       </div>
