@@ -1,14 +1,21 @@
-import React from 'react'
-import { useSortTicker } from '../assets/hooks/useSortTicker'
+import React, { useState } from 'react'
+import { TicketProps, useSortTicker } from '../assets/hooks/useSortTicker'
 import SisebarFilter from './SisebarFilter/SisebarFilter'
 import Ticket from './Ticket/Ticket'
 import style from './TicketsList.module.css'
 import angle from '../assets/image/angle.png'
 
 const TicketsList: React.FC<any> = (props) => {
-  const [sortTicker] = useSortTicker()
+  const [sortTicker, setSortTicker,] = useSortTicker()
+  const [newSortTicker, setNewSortTicker] = useState<Array<TicketProps>>([])
 
   const listTicker = sortTicker
+    .map(el => <Ticket
+      key={el.price}
+      item={el}
+    />
+    )
+  const newListTicker = newSortTicker
     .map(el => <Ticket
       key={el.price}
       item={el}
@@ -25,12 +32,19 @@ const TicketsList: React.FC<any> = (props) => {
       <div
         className={style.main}
       >
-        <SisebarFilter />
+        <SisebarFilter
+          sortTicker={sortTicker}
+          setNewSortTicker={setNewSortTicker}
+        />
         <div
           className={style.main__listTicker}
         >
           {
-            listTicker
+            newListTicker.length
+              ?
+              newListTicker
+              :
+              listTicker
           }
         </div>
       </div>

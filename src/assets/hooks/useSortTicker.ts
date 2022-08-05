@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { isStateCheckboxType } from "../../components/SisebarFilter/SisebarFilter"
 
 export interface TicketProps {
 	origin: string,
@@ -33,6 +34,6 @@ export const useSortTicker = () => {
 		}
 	}, [stateTickers])
 
-	return [stateTickers, sortTicker]
+	return [stateTickers, sortTicker ]
 }
 
