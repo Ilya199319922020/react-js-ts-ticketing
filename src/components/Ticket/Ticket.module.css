@@ -2,10 +2,9 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 15px 15px;
 	border: 0px solid rgb(216, 220, 236);
 	border-radius: 5px;
-	padding: 10px;
+	padding: 0 20px  20px 20px;
 	background-color: rgb(252, 252, 252);
 	box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 	margin-top: 20px;
@@ -28,8 +27,47 @@
 }
 
 .ticket__button_image{
-	width: 200px;
-	height: 125px;
+	width: 175px;
+	height: 100px;
+}
+.ticket__btn{
+	
+	height: 70px;
+	color: aliceblue;
+	background-color: rgb(247, 137, 47);
+	border: 0;
+	border-radius: 5px;
+	font-weight: 700;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+.ticket__btn:hover{
+	background-color: rgb(245, 116, 11);
+}
+
+.ticket__price > span{
+	line-height: 3px;
+	width: 0.4em;
+	border-bottom: 1px solid aliceblue;; 
+	display: inline-block;
+}
+.ticket__container{
+	height: 110px;
+	 display: flex;
+	align-items: flex-start;
+	padding: 0; 
+	
+}
+.ticket__container_info{
+	padding: 0;
+}
+.ticket__container_time{
+	text-align: start;
+	font-weight: 600;
+	font-size: 30px;
+	padding: 0;
+}
+.ticket__container_name{
+	font-weight: 600;
 }
 .ticket__container_transfer{
 	display: flex;
@@ -45,4 +83,9 @@
 	height: 1px;
 	background-color: rgb(182, 179, 179);
 	margin-right: 5px;
+}
+.transfer__element_stops{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 5px;
 }
