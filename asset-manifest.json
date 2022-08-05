@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/react-js-ts-ticketing/static/css/main.024e74be.css",
+    "main.js": "/react-js-ts-ticketing/static/js/main.ee07c8d5.js",
+    "static/js/787.7a78dd50.chunk.js": "/react-js-ts-ticketing/static/js/787.7a78dd50.chunk.js",
+    "static/media/turkishairlines.png": "/react-js-ts-ticketing/static/media/turkishairlines.035ed329dcec4484b632.png",
+    "static/media/angle.png": "/react-js-ts-ticketing/static/media/angle.eb7ac0c285aa1201ec01.png",
+    "index.html": "/react-js-ts-ticketing/index.html",
+    "main.024e74be.css.map": "/react-js-ts-ticketing/static/css/main.024e74be.css.map",
+    "main.ee07c8d5.js.map": "/react-js-ts-ticketing/static/js/main.ee07c8d5.js.map",
+    "787.7a78dd50.chunk.js.map": "/react-js-ts-ticketing/static/js/787.7a78dd50.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.024e74be.css",
+    "static/js/main.ee07c8d5.js"
+  ]
+}
