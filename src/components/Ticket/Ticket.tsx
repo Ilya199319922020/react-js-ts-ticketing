@@ -2,8 +2,13 @@ import React from 'react'
 import style from './Ticket.module.css'
 import turkishairlines from '../../assets/image/turkishairlines.png'
 import vector from '../../assets/image/Vector1.png'
+import { TicketProps } from '../../assets/hooks/useSortTicker'
 
-const Ticket: React.FC<any> = ({ item }) => {
+interface TickProps {
+	item: TicketProps
+}
+
+const Ticket: React.FC<TickProps> = ({ item }) => {
 	const { price, departure_time, origin, origin_name, departure_date,
 		arrival_time, destination, destination_name, arrival_date, stops
 	} = item

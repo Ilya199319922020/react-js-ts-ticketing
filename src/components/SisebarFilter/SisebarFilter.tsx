@@ -4,17 +4,13 @@ import { TicketProps } from '../../assets/hooks/useSortTicker'
 import { reducer } from '../../store/reducer'
 import style from './SisebarFilter.module.css'
 
-export interface isStateCheckboxType {
-	zeroTransfer: boolean,
-	allTransfer: boolean,
-	theTransfer: boolean,
-	secondTransfer: boolean,
-	thirdTransfer: boolean,
-	filterTicker: Array<TicketProps>,
+interface SisebarFilterProps {
+	sortTicker: TicketProps[],
+	setNewSortTicker: (a: TicketProps[]) => void,
 }
 
-const SisebarFilter: React.FC<any> = ({ sortTicker, setNewSortTicker, }) => {
-	const [newState, setNewState] = useState<any>([])
+const SisebarFilter: React.FC<SisebarFilterProps> = ({ sortTicker, setNewSortTicker, }) => {
+	const [newState, setNewState] = useState<TicketProps[]>([])
 
 	const [state, dispatch] = useReducer(reducer, {
 		zeroTransfer: false,

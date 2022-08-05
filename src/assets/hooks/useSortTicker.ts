@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { isStateCheckboxType } from "../../components/SisebarFilter/SisebarFilter"
 
 export interface TicketProps {
 	origin: string,

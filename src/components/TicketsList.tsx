@@ -12,7 +12,7 @@ const TicketsList: React.FC<any> = (props) => {
   const listTicker = newSortTicker.length
     ?
     newSortTicker
-      .map((el: any) => <Ticket
+      .map((el: TicketProps) => <Ticket
         key={el.price}
         item={el}
       />
@@ -20,7 +20,7 @@ const TicketsList: React.FC<any> = (props) => {
 
     :
     sortTicker
-      .map((el: any) => <Ticket
+      .map((el: TicketProps) => <Ticket
         key={el.price}
         item={el}
       />

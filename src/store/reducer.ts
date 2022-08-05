@@ -1,4 +1,5 @@
-import { TicketProps } from './../assets/hooks/useSortTicker';
+import { TicketProps } from './../assets/hooks/useSortTicker'
+
 export interface isStateCheckboxType {
 	zeroTransfer: boolean,
 	allTransfer: boolean,
@@ -9,7 +10,7 @@ export interface isStateCheckboxType {
 }
 
 export const reducer = (state: isStateCheckboxType, action: {
-	type: string, value: boolean | any,
+	type: string, value: { isFilter: boolean, valueFilterTicket: Array<TicketProps> },
 }) => {
 	switch (action.type) {
 		case 'tho':
@@ -30,7 +31,7 @@ export const reducer = (state: isStateCheckboxType, action: {
 					)
 					:
 					[...state.filterTicker]
-						.filter((o: TicketProps) => o.stops != 1)
+						.filter((o: TicketProps) => o.stops !== 1)
 			}
 		case 'second':
 			let filterTru = action.value.valueFilterTicket.filter((o: TicketProps) => o.stops === 2)
@@ -50,7 +51,7 @@ export const reducer = (state: isStateCheckboxType, action: {
 					)
 					:
 					[...state.filterTicker]
-						.filter((o: TicketProps) => o.stops != 2)
+						.filter((o: TicketProps) => o.stops !== 2)
 			}
 		case 'third':
 			let filterTr = action.value.valueFilterTicket.filter((o: TicketProps) => o.stops === 3)
@@ -70,7 +71,7 @@ export const reducer = (state: isStateCheckboxType, action: {
 					)
 					:
 					[...state.filterTicker]
-						.filter((o: TicketProps) => o.stops != 3)
+						.filter((o: TicketProps) => o.stops !== 3)
 			}
 		case 'zero':
 			let filterT = action.value.valueFilterTicket.filter((o: TicketProps) => o.stops === 0)
@@ -90,7 +91,7 @@ export const reducer = (state: isStateCheckboxType, action: {
 					)
 					:
 					[...state.filterTicker]
-						.filter((o: TicketProps) => o.stops != 0)
+						.filter((o: TicketProps) => o.stops !== 0)
 			}
 		default: return state
 	}

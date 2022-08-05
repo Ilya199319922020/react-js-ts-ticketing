@@ -1,11 +1,11 @@
 import React from 'react'
 import './App.css'
-import TicketsList from './components/TicketsList'
+import TicketsList from './components/TicketsList';
 
 const App: React.FC = () => {
   return (
     <>
-      < TicketsList />
+      <TicketsList />
     </>
   )
 }
