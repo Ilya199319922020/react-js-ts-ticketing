@@ -1,21 +1,82 @@
 .sidebar{
 	display: flex;
 	flex-direction: column;
-	padding: 30px 10px
+	padding: 30px 10px;
+	border: 0px solid rgb(216, 220, 236);
+	border-radius: 5px;
+	padding: 10px;
+	background-color: rgb(252, 252, 252);
+	box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+	height: 100%;
+	margin-top: 30px;
 }
 
 .sidebar__currency{
-	border: 0px solid rgb(216, 220, 236);
-	border-radius: 5px;
-	padding: 5px;
-	background-color: rgb(252, 252, 252);
-	box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+
 }
 .sidebar__transfer{
-	margin-top: 30px;
-	border: 0px solid rgb(216, 220, 236);
-	border-radius: 5px;
-	padding: 5px;
-	background-color: rgb(252, 252, 252);
-	box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+
 }
+.sidebar__currency_header{
+	padding: 5px;
+	font-size: 12px;
+	font-weight: 700;
+	color: rgb(119, 117, 117);
+}
+
+.sidebar__currency_btn{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.sidebar__currency_btnEl{
+	background-color: rgb(252, 252, 252);
+	height: 30px;
+	width: 80px;
+	color: rgb(115, 143, 255);
+	border: 1px solid rgb(115, 143, 255);
+}
+.sidebar__currency_btnEl:hover{
+	background-color: rgb(181, 215, 247);
+
+}
+.sidebar__currency_btnEl:focus{
+	background-color: rgb(26, 118, 204);
+	color: rgb(252, 252, 252);
+}
+.sidebar__currency_btnEl:nth-child(1){
+	border-radius: 7px 0 0 7px ;
+}
+.sidebar__currency_btnEl:nth-child(2){
+	border-radius: 0;
+}
+.sidebar__currency_btnEl:nth-child(3){
+	border-radius: 0 7px 7px 0 ;;
+}
+.element__input{
+display: flex;
+color: rgb(119, 117, 117);
+margin-top: 5px;
+padding: 3px;
+cursor: pointer;
+}
+.element__input:hover{
+	background-color: rgb(181, 215, 247);
+}
+.element__input_label{
+	margin-left: 5px;
+}
+
+.element__input_text{
+	margin-left: 20px;
+	color: rgb(252, 252, 252);
+}
+.element__input:hover .element__input_text{
+	color: rgb(26, 118, 204);
+}
+.element__input_checkbox{
+		width: 20px;
+	accent-color: rgb(250, 250, 250);
+}
+
+

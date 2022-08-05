@@ -53,17 +53,36 @@ const SisebarFilter: React.FC<SisebarFilterProps> = ({ sortTicker, setNewSortTic
 			<div
 				className={style.sidebar__currency}
 			>
-				<h5>ВАЛЮТА</h5>
-				<div>
-					<button>RUB</button>
-					<button>USD</button>
-					<button>EUR</button>
+				<div
+					className={style.sidebar__currency_header}
+				>ВАЛЮТА
+				</div>
+				<div
+					className={style.sidebar__currency_btn}
+				>
+					<button
+						className={style.sidebar__currency_btnEl}
+					>RUB
+					</button>
+					<button
+						className={style.sidebar__currency_btnEl}
+					>
+						USD
+					</button>
+					<button
+						className={style.sidebar__currency_btnEl}
+					>
+						EUR
+					</button>
 				</div>
 			</div>
 			<div
 				className={style.sidebar__transfer}
 			>
-				<h5>КОЛИЧЕСТВО ПЕРЕСАДОК</h5>
+				<div
+					className={style.sidebar__currency_header}
+				>КОЛИЧЕСТВО ПЕРЕСАДОК
+				</div>
 				<div>
 					<InputCheckbox
 						id={'all'}
